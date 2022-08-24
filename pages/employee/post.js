@@ -44,31 +44,46 @@ export default function post() {
   };
 
   return (
-   <div>
-  <input type="number" className="form-control" placeholder="ชื่อ" onchange="{(e)"  /> {'{'}
-  setEmployee_id(e.target.value);
-  {'}'}{'}'}
-  /&gt;
-  <br />
-  <input type="text" className="form-control" placeholder="นามสกุล" onchange="{(e)"  /> {'{'}
-  setEmployee_name(e.target.value);
-  {'}'}{'}'}
-  /&gt;
-  <br />
-  <input type="text" className="form-control" placeholder="ชื่อผู้ใช้" onchange="{(e)"  /> {'{'}
-  setEmployee_username(e.target.value);
-  {'}'}{'}'}
-  /&gt;
-  <br />
-  <input type="text" className="form-control" placeholder="รหัสผ่าน" onchange="{(e)"  /> {'{'}
-  setEmployee_password(e.target.value);
-  {'}'}{'}'}
-  /&gt;
-  <br />
-  <button type="button" className="btn btn-success" onclick="{addEmployee}">
-    บันทึก
-  </button>
-</div>
-
+    <div>
+      <input
+        type="text"
+        className="form-control"
+        placeholder="ชื่อ"
+        onChange={(e) => {
+          setEmployee_id(e.target.value);
+        }}
+      />
+      <br />
+      <input
+        type="text"
+        className="form-control"
+        placeholder="นามสกุล"
+        onChange={(e) => {
+          setEmployee_name(e.target.value);
+        }}
+      />
+      <br />
+      <input
+        type="text"
+        className="form-control"
+        placeholder="ชื่อผู้ใช้"
+        onChange={(e) => {
+          setEmployee_username(e.target.value);
+        }}
+      />
+      <br />
+      <input
+        type="text"
+        className="form-control"
+        placeholder="รหัสผ่าน"
+        onChange={(e) => {
+          setEmployee_password(e.target.value);
+        }}
+      />
+      <br />
+      <button type="button" className="btn btn-success" onClick={addEmployee}>
+        บันทึก
+      </button>
+    </div>
   );
 }
