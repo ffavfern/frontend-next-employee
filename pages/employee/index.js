@@ -87,6 +87,6 @@ export const getServerSideProps = async () => {
   const res = await Axios.get("http://localhost:8080/employees");
   const data = res.data;
   return {
-    props: { employees: data },
+    props: { employees: data ?? [] },
   };
 };
